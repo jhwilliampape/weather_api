@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <title>Weather API</title>
+</head>
+<style>
+
+</style>
+<body>
+    
+    <div class="container">
+        <h1>Current Global</h1>
+        <h2>Forecast</h2>
+        
+        <!-- Search -->
+        <div class="row">
+            <div class="col">
+                <form name="Search" id="SearchForm">
+                    <label for="city"></label>
+                    <input type="text" name="city" id="city" placeholder="Enter City...">
+                    <label for="zip"></label>
+                    <input type="text" name="zip" id="zip" placeholder="Enter Zip...">
+                    <button type="submit" id="submitButton" onClick="loadData()">Get Weather</button>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- Results -->
+        <div class="row" id="searchRes">
+            <table id="weather-table">
+                <th scope="col" id="forecast">Forecast:</th>
+                <th scope="col" id="temp">Current Temperature:</th>
+                <wt_body1 id="wt_body1">
+                    <tr id="table-row-0"></tr>
+                </wt_body1>
+                <th scope="col" id="high">H:</th>
+                <th scope="col" id="low">L:</th>
+                <wt_body2 id="wt_body2">
+                    <tr id="table-row-1"></tr>
+                </wt_body2>
+                <th scope="col" id="humidity">Humidity:</th>
+                <th scope="col" id="pressure">Pressure:</th>
+                <wt_body3 id="wt_body3">
+                    <tr id="table-row-2"></tr>
+                </wt_body3>
+            </table>
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+</body>
+</html>
